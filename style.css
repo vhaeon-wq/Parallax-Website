@@ -228,21 +228,53 @@ section #text {
     opacity: 0.8;
 }
 
+/* Animate fishes from bottom to top */
+.fishes:not(#seabed) {
+    bottom: -20%;
+    animation-name: swimUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes swimUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-140vh);
+        opacity: 1;
+    }
+}
+
 /* Properties for each fish and sea bed*/
 #fish1 {
-    top: 0%;
+    left: 5%;
+    animation-duration: 22s;
+    animation-delay: 0s;
 }
 
 #fish2 {
-    top: 32%;
+    left: 35%;
+    animation-duration: 25s;
+    animation-delay: 3s;
 }
 
 #fish3 {
-    top: 60%;
+    left: 60%;
+    animation-duration: 28s;
+    animation-delay: 6s;
 }
 
 #fish4 {
-    top: 87%;
+    left: 80%;
+    animation-duration: 24s;
+    animation-delay: 1.5s;
 }
 
 #seabed {
